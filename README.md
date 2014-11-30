@@ -32,6 +32,8 @@ Or install it yourself as:
 
     $ gem install popular_stream
 
+This gems requires **Ruby 2.1**.
+
 ## Usage
 
 There are two main methods `vote` and `get`. `vote` adds an event to the list
