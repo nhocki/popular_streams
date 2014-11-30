@@ -1,7 +1,5 @@
 # Popular Stream
 
-# THIS IS NOT READY YET!
-
 Simple popular content tracker with a Redis backend.
 
 Mostly taken from the "Popular Stream" code
