@@ -4,9 +4,9 @@
 
 Simple popular content tracker with a Redis backend.
 
-Mostly taken from the "Popular Stream" code
-[here](http://stdout.heyzap.com/2013/04/08/surfacing-interesting-content/) but
-bundled up as a gem.
+Mostly taken from the "Popular Stream" code found in the
+[Surfacing Interesting Content](http://stdout.heyzap.com/2013/04/08/surfacing-interesting-content/)
+post but bundled up as a gem.
 
 PopularStream tracks an "event" on a group of "fields" and returns the ones that
 are currently popular.
@@ -17,6 +17,8 @@ would be "tagging" and the field would be the tag name ("rubygems" for example).
 The way this works is that "old" votes will count less than newer votes, that way
 a tag that was used 20 times today will be more popular than a tag used 30 times
 last week.
+
+Once again, thanks to Micah Fivecoate for his post.
 
 ## Installation
 
