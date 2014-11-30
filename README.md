@@ -6,7 +6,7 @@ Simple popular content tracker with a Redis backend.
 
 Mostly taken from the "Popular Stream" code
 [here](http://stdout.heyzap.com/2013/04/08/surfacing-interesting-content/) but
-bundled up as a gem with an optional Sinatra backend.
+bundled up as a gem.
 
 PopularStream tracks an "event" on a group of "fields" and returns the ones that
 are currently popular.
@@ -58,6 +58,24 @@ stream.get # => ['rubygems', 'ruby']
 stream.get(limit: 1, offset: 1) # => ['ruby']
 stream.get(offset: 10) # => []
 ```
+
+## Seting up & Configuring Redis
+
+Popular Stream uses Redis as the storage database. By default it will connect to
+the redis client on `ENV['REDIS_URL']`. You can also specify what redis client to
+use with `PopularStream.redis = Redis.new(host: 'example.com')`.
+
+Notice that this is for *all* streams. This is because we don't want to create new
+connections for every new stream instance we create, so the same client is used.
+
+## TODO
+
+* Sinatra application. I want to bundle an optional Sinatra application that
+makes this gem super simple to setup as a service.
+
+* Multiple storage databases. Right now everything's stored on Redis but it should
+be simple to use more stuff. People should be able to create "adapters" and use
+them as needed.
 
 ## Contributing
 

@@ -1,3 +1,3 @@
-module PopularStream
-  VERSION = "0.0.1"
+class PopularStream
+  VERSION = "1.0.0"
 end
