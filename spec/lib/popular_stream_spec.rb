@@ -4,6 +4,9 @@ RSpec.describe PopularStream do
   let(:one_week) { 60 * 60 * 24 * 7 } # 1 week in seconds.
   let(:stream) { PopularStream.new("popular_stream") }
 
+  # Make a new "Redis" for each test to not leak the doubles.
+  before { PopularStream.redis = Redis.new }
+
   describe ".redis" do
     let(:redis) { double }
 
