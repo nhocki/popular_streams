@@ -1,5 +1,7 @@
 # Popular Stream
 
+[![Build Status](https://travis-ci.org/nhocki/popular_streams.svg?branch=master)](https://travis-ci.org/nhocki/popular_streams)
+
 Simple popular content tracker with a Redis backend.
 
 Mostly taken from the "Popular Stream" code
