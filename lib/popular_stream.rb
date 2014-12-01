@@ -32,8 +32,8 @@ class PopularStream
     trim
   end
 
-  def get(limit: 20, offset: 0)
-    redis.zrevrange(name, offset, offset + limit - 1)
+  def get(limit: 20, offset: 0, **options)
+    redis.zrevrange(name, offset, offset + limit - 1, options)
   end
 
   def clear!

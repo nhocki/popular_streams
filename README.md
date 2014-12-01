@@ -61,6 +61,9 @@ stream.get # => ['rubygems', 'ruby']
 # You can pass `limit` and `offset`
 stream.get(limit: 1, offset: 1) # => ['ruby']
 stream.get(offset: 10) # => []
+
+# You can ask to get the scores as well
+stream.get(with_scores: true) # => [['ruby', 0.00001]]
 ```
 
 ## Seting up & Configuring Redis
