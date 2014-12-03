@@ -18,6 +18,10 @@ The way this works is that "old" votes will count less than newer votes, that wa
 a tag that was used 20 times today will be more popular than a tag used 30 times
 last week.
 
+[Here are more details about how this gem works.](http://blog.nhocki.com/2014/12/02/trending-content-with-ruby-and-redis/)
+
+This gem was extracted from the [We Heart It](http://weheartit.com) codebase.
+
 Once again, thanks to Micah Fivecoate for his post.
 
 ## Installation
