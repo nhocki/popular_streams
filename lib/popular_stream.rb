@@ -27,7 +27,7 @@ class PopularStream
   def vote(field:, time: Time.now.to_i, weight: 1)
     time = time.to_i if time.respond_to?(:to_i)
 
-    delta = 2 ** ((time - epoch) / HALF_LIFE)
+    delta = 2 ** ((time - epoch).to_f / HALF_LIFE)
     redis.zincrby(name, weight * delta.to_f, field)
     trim
   end
