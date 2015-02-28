@@ -1,7 +1,7 @@
 require "popular_stream/version"
 
 # Most of this was taken from:
-# http://stdout.heyzap.com/2013/04/08/surfacing-interesting-content/
+# http://qwerjk.com/posts/surfacing-interesting-content
 class PopularStream
   attr_reader :name, :epoch, :max_items
 
