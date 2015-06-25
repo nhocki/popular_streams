@@ -1,3 +1,4 @@
+require 'time'
 require "popular_stream/version"
 
 # Most of this was taken from:
